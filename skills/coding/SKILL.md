@@ -28,7 +28,7 @@ This skill provides a set of core principles and practices for software developm
 - **Performance:** Be mindful of time and space complexity, but avoid premature optimization.
 
 ## Automated Analysis & Quality Control
-- **Static Analysis & Linting:** Every project MUST have automated linting and static analysis (e.g., ESLint, Prettier, Ruff, Sonar). 
+- **Static Analysis & Linting:** Every project MUST have automated linting, formatting and static analysis (e.g., ESLint, Prettier, Ruff, Sonar). 
     - **Check:** Identify if these tools are configured.
     - **Propose:** If missing, immediately propose adding them (e.g., `npm install --save-dev eslint`).
 - **Automated Tests:** Ensure there is a test runner configured (e.g., Jest, Pytest).
@@ -37,14 +37,15 @@ This skill provides a set of core principles and practices for software developm
 
 ## Verifying Code Changes
 Before completing any task, you MUST perform the following verification loop:
-1.  **Self-Code Review:**
+1.  **Simplification:** Use the code-simplifier plugin to make the code cleaner and more maintainable.
+2.  **Self-Code Review:**
     - Review the changes against the task requirements.
     - Ensure compliance with this `coding` skill (DRY, KISS, SOLID).
     - Check for potential security vulnerabilities or performance regressions.
-2.  **Static Analysis & Linting:**
+3.  **Static Analysis & Linting:**
     - Run the project's linting/format commands (e.g., `npm run lint`, `prettier --check .`).
     - Fix all reported issues.
-3.  **Unit Testing:**
+4.  **Unit Testing:**
     - **Add Missing Tests:** If new logic was added, write concise unit tests covering the happy path and edge cases.
     - **Run Tests:** Execute the test suite (e.g., `npm test`, `pytest`).
     - **Verification:** Ensure all tests pass. If they fail, fix the implementation or the test.
