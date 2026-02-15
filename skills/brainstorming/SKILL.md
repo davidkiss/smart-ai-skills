@@ -14,7 +14,7 @@ Start by understanding the current project context in the project's root directo
 ## The Process
 
 **Understanding the idea:**
-- Check out the current project state first (files, docs, recent git commits)
+- Check out the current project state first (files, docs, recent git commits) using subagent(s) to minimize LLM token usage
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
