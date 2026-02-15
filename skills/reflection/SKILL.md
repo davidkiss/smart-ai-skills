@@ -25,3 +25,4 @@ This skill is used to periodically reflect on the interaction with the user. It 
 - **Conciseness:** Keep changes as brief as possible. Often a few words are enough to clarify a requirement or fix a common mistake.
 - **Accuracy:** Ensure the proposal directly addresses a real issue or preference observed in the session.
 - **Failure Analysis:** Pay special attention to tool failures or when the user has to correct your approach. These are primary candidates for reflection.
+- **Conflict Resolution:** If a proposed change conflicts with details of an existing skill or user preference, propose a resolution that best serves the user's current intent.
