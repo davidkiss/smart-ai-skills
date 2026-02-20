@@ -33,8 +33,6 @@ Review available skills and propose creating new skills if needed. If you propos
 ```markdown
 # [Task Name] Task Breakdown
 
-> **For Claude:** REQUIRED SUB-SKILL: Use executing-plan skill to execute this task breakdown task-by-task.
-
 **Goal:** [One sentence describing what this achieves]
 
 **Approach:** [2-3 sentences about approach]
@@ -76,17 +74,18 @@ def function(input):
     return expected
 ```
 
-**Step 4: Run test to verify it passes**
+
+**Step 4: Cleanup code changes**
+Use skill(s) if available to cleanup code changes
+
+**Step 5: Review code changes**
+Use skill(s) if available to review code changes.
+Make sure code follows the project's coding standards and aligns with the specs and the task breakdown.
+
+**Step 6: Run test to verify it passes**
 
 Run: `pytest tests/path/test.py::test_name -v`
 Expected: PASS
-
-**Step 5: Commit**
-
-```bash
-git add tests/path/test.py src/path/file.py
-git commit -m "feat: add specific feature"
-```
 ```
 
 ## Remember
