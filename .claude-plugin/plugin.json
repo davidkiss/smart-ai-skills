@@ -1,7 +1,7 @@
 {
     "name": "smart-ai",
     "description": "A plugin with smart AI skills",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "David Kiss"
     }
