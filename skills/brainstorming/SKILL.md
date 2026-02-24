@@ -35,6 +35,10 @@ Start by understanding the current project context in the project's root directo
   - for non-coding projects: confirm the list of aspects to cover with the user
 - Be ready to go back and clarify if something doesn't make sense
 
+**IMPORTANT: No applying changes or any other actions until user confirms**
+- Only explore, ask questions, and present specs
+- Wait for explicit user confirmation before proceeding to task breakdown or applying any changes
+
 ## After the Specs
 
 **Documentation:**
@@ -43,6 +47,8 @@ Start by understanding the current project context in the project's root directo
 **Detailed Execution Plan (if continuing):**
 - Ask: "Ready to continue with a detailed task breakdown?"
 - Use the task-breakdown skill to create detailed task breakdown
+- IMPORTANT: do not start applying changes - only create the task breakdown document
+- Wait for explicit user confirmation before applying any changes from the breakdown
 
 ## Key Principles
 
@@ -52,3 +58,4 @@ Start by understanding the current project context in the project's root directo
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present specs in sections, validate each
 - **Be flexible** - Go back and clarify when something doesn't make sense
+- **No premature actions** - Never start applying changes until user confirms the task breakdown
