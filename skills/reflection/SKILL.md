@@ -18,11 +18,13 @@ This skill is used to periodically reflect on the interaction with the user. It 
 3.  **Propose:** Formulate a single, concise change.
     -   If updating a skill, show a diff of the proposed change.
     -   If adding a preference, show the proposed addition to `CLAUDE.md`.
-4.  **Confirm:** Present the proposal to the user and ask for explicit confirmation before applying it.
+4.  **Confirm:** Present the proposal to the user and ask for explicit confirmation without making any changes first.
+5.  **Apply Changes:** Once user confirmed the changes, only then apply them
 
 ## Guidelines
 - **One at a time:** Only propose one change per invocation to maintain focus and allow for careful review.
 - **Conciseness:** Keep changes as brief as possible. Often a few words are enough to clarify a requirement or fix a common mistake.
 - **Accuracy:** Ensure the proposal directly addresses a real issue or preference observed in the session.
+- **Specificity:** Think how you could make the learnings more generic to apply to other use cases, but don't make the changes too generic so that it would not address the original learnings
 - **Failure Analysis:** Pay special attention to tool failures or when the user has to correct your approach. These are primary candidates for reflection.
 - **Conflict Resolution:** If a proposed change conflicts with details of an existing skill or user preference, propose a resolution that best serves the user's current intent.
