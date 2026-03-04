@@ -11,9 +11,14 @@ Write comprehensive task breakdowns assuming the expert who is going to implemen
 
 Assume they are a skilled worker, but know almost nothing about our toolset or problem domain. Assume they don't know how to verify they are doing the right thing.
 
-Review available skills and propose creating new skills if needed. If you propose creating new skills, you MUST create them before creating the task breakdown.
+Analyze available skills and propose creating new skills if needed. If you propose creating new skills, you MUST create them before creating the task breakdown.
 
 **Announce at start:** "I'm using the task-breakdown skill to create a plan."
+
+**Presenting the tasks:**
+- Once you believe you have the full task breakdown, present the tasks one-by-one to the user
+- Ask after each task whether it looks right so far
+- Be ready to go back and clarify if something doesn't make sense
 
 **Save tasks to:** `docs/YYYY-MM-DD-<feature-name>-tasks.md`
 
