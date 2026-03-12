@@ -17,14 +17,10 @@ Start by understanding the current project context in the project's root directo
 - Check out the current project state first (files, docs, recent git commits) using subagent(s) to minimize LLM token usage
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
+- Propose 2-3 different approaches as answers to a question, with trade-offs and your recommendation
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
 - Only ask questions where the answer cannot be easily inferred from the project context, etc.
 - Focus on understanding: purpose, constraints, success criteria
-
-**Exploring approaches:**
-- Propose 2-3 different approaches with trade-offs
-- Present options conversationally with your recommendation and reasoning
-- Lead with your recommended option and explain why
 
 **Presenting the specs:**
 - Once you believe you understand what you're building, present the specs
