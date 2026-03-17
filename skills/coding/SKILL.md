@@ -43,9 +43,11 @@ Before completing any task, you MUST perform the following verification loop:
     - Ensure compliance with this `coding` skill (DRY, KISS, SOLID).
     - Check for potential security vulnerabilities or performance regressions.
 3.  **Static Analysis & Linting:**
+    - If project does not have linting/formatting configured, propose adding it.
     - Run the project's linting/format commands (e.g., `npm run lint`, `prettier --check .`).
     - Fix all reported issues.
 4.  **Unit Testing:**
+    - If project does not have a test runner configured, propose adding one.
     - **Add Missing Tests:** If new logic was added, write concise unit tests covering the happy path and edge cases.
     - **Run Tests:** Execute the test suite (e.g., `npm test`, `pytest`).
     - **Verification:** Ensure all tests pass. If they fail, fix the implementation or the test.
