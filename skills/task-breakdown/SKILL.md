@@ -15,6 +15,10 @@ Analyze available skills and propose creating new skills if needed. If you propo
 
 **Announce at start:** "I'm using the task-breakdown skill to create a plan."
 
+**Constraints:**
+- Each task should have a last step that verifies the task was completed correctly
+- The very last task should verify that after completing all tasks, the changes and actions were applied correctly and as intended by the specs, if provided
+
 **Presenting the tasks:**
 - Once you believe you have the full task breakdown, present the tasks one-by-one to the user
 - Ask after each task whether it looks right so far
@@ -29,7 +33,6 @@ Analyze available skills and propose creating new skills if needed. If you propo
 - "Run it to make sure it fails" - step
 - "Implement the minimal code to make the test pass" - step
 - "Run the tests and make sure they pass" - step
-- "Commit" - step
 
 ## Task Breakdown Document Header
 
