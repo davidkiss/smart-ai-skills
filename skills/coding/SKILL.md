@@ -1,6 +1,6 @@
 ---
 name: coding
-description: "General coding best practices and software engineering principles to build robust, maintainable, and scalable software."
+description: "MUST use for all coding related tasks - includes general coding best practices and software engineering principles to build robust, maintainable, and scalable software."
 ---
 
 # General Coding Best Practices
