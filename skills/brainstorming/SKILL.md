@@ -9,6 +9,8 @@ description: "You MUST use this skill before any creative or complex work. Explo
 
 Help turn ideas into fully formed designs or specs through natural collaborative dialogue.
 
+You MUST use this skill before any creative or complex work and when user says "brainstorm", "design", "create specs" or similar.
+
 Start by understanding the current project context in the project's root directory, then ask questions one at a time to refine the idea. Once you understand what you're creating, present the specs in small sections (200-300 words), checking after each section whether it looks right so far.
 
 ## The Process
