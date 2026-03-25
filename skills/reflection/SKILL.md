@@ -1,16 +1,16 @@
 ---
 name: reflection
-description: "Analyzes the conversation and tool usage to propose improvements to skills or store user preferences."
+description: "MUST use this skill when user provides feedback / ask to do things in certain way, or when a tool call fails - for self-improvement - to learn user preferences and store them in AGENT.md / CLAUDE.md, and to propose improvements to skills."
 ---
 
 # Reflection Skill
 
 ## Overview
-This skill is used to periodically reflect on the interaction with the user. It analyzes what worked, what didn't (tool failures), and identifies recurring patterns or explicit user preferences that should be formalized.
+This skill is used to learn from interaction with the user and failures in tool calls. It analyzes what worked, what didn't (tool failures), and identifies recurring patterns or explicit user preferences that should be formalized.
 
 ## Objectives
 - **Improve Skills:** Identify gaps or inefficiencies in existing skill definitions and propose concise updates.
-- **Store Preferences:** Capture user preferences, project-specific rules, or recurring instructions in a `CLAUDE.md` file.
+- **Store Preferences:** Capture user preferences, project-specific rules, or recurring instructions in a `AGENT.md` or `CLAUDE.md` (when used in Claude Code) file.
 
 ## Process
 1.  **Analyze:** Review the conversation history, tool calls, and any failures or corrections from the user.
