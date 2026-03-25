@@ -18,6 +18,7 @@ This skill provides a set of core principles and practices for software developm
     - Liskov Substitution: Subtypes must be substitutable for their base types.
     - Interface Segregation: Many client-specific interfaces are better than one general-purpose interface.
     - Dependency Inversion: Depend on abstractions, not concretions.
+- **Existing Guidelines:** - Follow existing guidelines in the project (e.g. CLAUDE.md, AGENT.md, etc.)
 
 ## Implementation Guidelines
 - **Clean Code:** Use descriptive names for variables, functions, and classes. Write code that is easy to read and understand.
