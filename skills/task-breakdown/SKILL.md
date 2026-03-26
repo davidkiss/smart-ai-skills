@@ -22,9 +22,8 @@ Analyze available skills and propose creating new skills if needed. If you propo
 **Presenting the tasks:**
 - Once you believe you have the full task breakdown, present the tasks one-by-one to the user
 - Ask after each task whether it looks right so far
-- Be ready to go back and clarify if something doesn't make sense
-
-**Save tasks to:** `docs/YYYY-MM-DD-<feature-name>-tasks.md`
+- Be ready to go back and clarify if something doesn't make sense - consider updating previous tasks based on user feedback, if needed
+- When user confirms a task looks good, update `docs/YYYY-MM-DD-<feature-name>-tasks.md` with that task
 
 ## Bite-Sized Task Granularity
 
