@@ -26,7 +26,7 @@ Start by understanding the current project context in the project's root directo
 
 **Leverage existing skills**
 - Identify relevant agent skills
-- Output: "I'll use the following skills to help you with this task: @skill1, @skill2, ..."
+- Output: "I'll use the following skills to help you with the brainstorming: @skill1, @skill2, ..."
 - Use the identified skills to explore the idea
 
 **Presenting the specs:**

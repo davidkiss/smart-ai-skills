@@ -19,8 +19,14 @@ Analyze available agent skills and use all relevant ones to create the task brea
 - Each task should have a last step that verifies the task was completed correctly
 - The very last task should verify that after completing all tasks, the changes and actions were applied correctly and as intended by the specs, if provided
 
+**Leverage existing skills**
+- Identify relevant agent skills
+- Output: "I'll use the following skills to help you with the task breakdown: @skill1, @skill2, ..."
+- Use the identified skills to create the task breakdown
+
 **Presenting the tasks:**
-- Once you believe you have the full task breakdown, present the tasks one-by-one to the user
+- Once you believe you have the full task breakdown, use a subagent to critique the task breakdown and find any missing, incorrect or unclear parts - subagent must ground critique using websearch tool
+- Then present the tasks one-by-one to the user
 - Present tasks based on their dependencies on each other - e.g. if task B depends on task A, task A must be presented before task B
 - Ask after each task whether it looks right so far
 - Be ready to go back and clarify if something doesn't make sense - consider updating previous tasks based on user feedback, if needed
