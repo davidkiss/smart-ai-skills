@@ -24,6 +24,11 @@ Start by understanding the current project context in the project's root directo
 - Only ask questions where the answer cannot be easily inferred from the project context, etc.
 - Focus on understanding: purpose, constraints, success criteria
 
+**Leverage existing skills**
+- Identify relevant agent skills
+- Output: "I'll use the following skills to help you with this task: @skill1, @skill2, ..."
+- Use the identified skills to explore the idea
+
 **Presenting the specs:**
 - Once you believe you understand what you're building, present the specs
 - Break it into sections of 200-300 words
