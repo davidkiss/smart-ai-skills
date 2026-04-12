@@ -25,7 +25,7 @@ Analyze available agent skills and use all relevant ones to create the task brea
 - Use the identified skills to create the task breakdown
 
 **Presenting the tasks:**
-- Once you believe you have the full task breakdown, use a subagent to critique the task breakdown and find any missing, incorrect or unclear parts - subagent must ground critique using websearch tool
+- Once you believe you have the full task breakdown, use a subagent to critique the task breakdown for self-correction - subagent must ground critique using websearch tool
 - Then present the tasks one-by-one to the user
 - Present tasks based on their dependencies on each other - e.g. if task B depends on task A, task A must be presented before task B
 - Ask after each task whether it looks right so far
