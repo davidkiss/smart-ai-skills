@@ -20,9 +20,9 @@ Analyze available agent skills and use all relevant ones to create the task brea
 - The very last task should verify that after completing all tasks, the changes and actions were applied correctly and as intended by the specs, if provided
 
 **Leverage existing skills**
-- Identify relevant agent skills
+- Identify relevant agent skills - other than this one and the @subagent-task-execution skill
 - Output: "I'll use the following skills to help you with the task breakdown: @skill1, @skill2, ..."
-- Use the identified skills to create the task breakdown
+- Load and use the identified skills to create the task breakdown
 
 **Presenting the tasks:**
 - Once you believe you have the full task breakdown, use a subagent to critique the task breakdown for self-correction - subagent must ground critique using websearch tool
