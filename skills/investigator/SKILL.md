@@ -18,24 +18,54 @@ You MUST use this skill when the user mentions:
 
 ## Instructions
 
-### 1. Analyze Project Context
-Gather all relevant information to understand the current environment:
-- **Project Structure:** List files in the root directory to identify the project's purpose, tools, and organization.
-- **Project Documentation:** Read key files such as `README.md`, `CONTRIBUTING.md`, or any project-specific guidelines (e.g., `AGENT.md`, `CLAUDE.md`).
-- **Recent Activity:** Review recent history (e.g., `git log -n 5` for coding projects or recent document updates) to understand what has changed recently.
+This skill covers three distinct use cases. Identify which use case(s) apply to the current task and follow the corresponding parallel subagent workflow.
 
-### 2. Impact & Relationship Mapping
-Understand how components relate and how potential actions might propagate:
-- **Identify Relationships:** Map out how different parts of the project (files, docs, scripts, data) are interconnected.
-- **Predict Consequences:** Before proposing an action, identify what other parts of the project might be affected. Use search tools to find references and dependencies.
-- **Constraint Identification:** Look for existing patterns, rules, or constraints that must be respected in any future action.
+---
 
-### 3. Root Cause Investigation
-When investigating an issue or unexpected behavior:
-- **Consistent Reproduction:** Identify the exact conditions or steps required to reproduce the issue.
-- **Deep Analysis:** Look past the immediate symptoms. Trace the problem back to its origin by examining logs, data flows, and configuration.
-- **Component Boundaries:** Analyze the interactions between different parts of the system to see where the breakdown occurs.
-- **Outcome:** Provide a clear explanation of the root cause and the evidence supporting it. Do NOT make any changes or propose fixes as part of this skill.
+### Use Case 1: Context & History Analysis
+Use when you need to understand the "What", "How", and "When" of the project environment.
+
+#### Dispatch Parallel Investigation Subagents:
+- **Subagent 1 (Structural Analysis)**: List files and analyze directory layout to identify the tech stack and organization.
+- **Subagent 2 (Documentation Review)**: Read and summarize key files (`README.md`, `AGENT.md`, `CLAUDE.md`, etc.).
+- **Subagent 3 (Temporal Context)**: Review recent activity (e.g., `git log -n 5`) to understand recent changes and project evolution.
+
+#### Synthesize:
+Combine the structural, documented, and historical findings into a unified context report.
+
+---
+
+### Use Case 2: Impact & Relationship Mapping
+Use when you need to understand connections and predict the consequences of potential actions.
+
+#### Dispatch Parallel Investigation Subagents:
+- **Subagent 1 (Dependency Analysis)**: Map out how components (files, functions, data) are interconnected. Use search tools to find all references.
+- **Subagent 2 (Constraint Mapping)**: Identify project rules, patterns, or architectural constraints that must be respected.
+- **Subagent 3 (Downstream Prediction)**: Predict how a specific change might propagate through the system and affect unrelated parts.
+
+#### Synthesize:
+Provide a clear map of relationships and a "risk report" for any proposed actions.
+
+---
+
+### Use Case 3: Root Cause Investigation (Troubleshooting)
+Use when an issue is reported and you need to find the "Why" behind the failure.
+
+#### Dispatch Parallel Investigation Subagents:
+- **Subagent 1 (Reproduction)**: Establish a consistent reproduction case (manual steps or a minimal failing test).
+- **Subagent 2 (Trace Analysis)**: Examine logs, trace data flows, and analyze state transitions to locate the breakdown.
+- **Subagent 3 (Interface Analysis)**: Investigate interactions between components and external systems to find boundary failures.
+
+#### Synthesize:
+Provide a definitive explanation of the root cause and the evidence supporting it. Do NOT make changes or propose fixes.
+
+---
+
+### Final Outcome
+For any selected use case:
+1. **Consolidate**: Combine all subagent reports into a cohesive analysis.
+2. **Identify Gaps**: Highlight any missing information or contradictions.
+3. **Report**: Deliver the findings as a purely analytical report. Do NOT modify the project or implement fixes.
 
 ## Examples
 
@@ -45,6 +75,9 @@ When investigating an issue or unexpected behavior:
 3. **Report:** Present the current pattern and the files that would be impacted.
 
 ### Scenario: User says "Analyze why the build is failing"
-1. **Context:** Read the last few lines of the build log and check `git log` for recent changes to the build config.
-2. **RCA:** Trace the error in the log back to a specific missing environment variable in the CI configuration.
-3. **Report:** Identify the specific root cause (missing ENV var) and explain why it's causing the failure.
+1. **Selection**: Select **Use Case 3: Root Cause Investigation**.
+2. **Investigation (Parallel)**:
+   - **Subagent 1 (Log Capture)**: Reproduces the build failure and captures the error logs for later correlation.
+   - **Subagent 2 (Regression Hunt)**: Simultaneously searches the git history and diffs for any changes to the build configuration or entry points in the last 24 hours.
+   - **Subagent 3 (Environment Audit)**: Simultaneously checks local environment variables, Node.js/Python versions, and global dependencies against the project's requirements.
+3. **Synthesis**: Correlates Subagent 1's crash log (pointing to a missing secret) with Subagent 3's finding that the local `.env` is out of sync with the new requirements identified by Subagent 2.
