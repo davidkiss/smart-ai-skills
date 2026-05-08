@@ -11,12 +11,12 @@ Help turn ideas into fully formed designs or specs through natural collaborative
 
 You MUST use this skill before any creative or complex work and when user says "brainstorm", "design", "create specs" or similar.
 
-Start by understanding the current project context in the project's root directory, then ask questions one at a time to refine the idea. Once you understand what you're creating, present the specs in small sections (200-300 words), checking after each section whether it looks right so far.
+Start by understanding the current project context using the @investogator skill. Then, ask questions one at a time to refine the idea. Once you understand what you're creating, use the @investigator skill again to analyze how the changes might impact the project, then present the specs in small sections (200-300 words), checking after each section whether it looks right so far.
 
 ## The Process
 
 **Understanding the idea:**
-- Check out the current project state first (files, docs, recent git commits) using subagent(s) to minimize LLM token usage
+- Use the @investogator skill to check out the current project state first (files, docs, recent git commits)
 - Ask questions one at a time to refine the idea
 - Prefer multiple choice questions when possible, but open-ended is fine too
 - Propose 2-3 different approaches as answers to a question, with trade-offs and your recommendation
